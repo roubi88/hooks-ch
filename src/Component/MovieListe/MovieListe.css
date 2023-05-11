@@ -1,6 +1,12 @@
 .moviesList{
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content:space-around;
   
 }
+@media screen and (max-width: 800px) {
+    .moviesList  {
+      background-color: blue;
+      /* display:block; */
+    }
+  }
