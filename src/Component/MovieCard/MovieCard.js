@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
+import Rating from '../Rating/Rating';
 
 const MovieCard = ({movie}) => {
     return (
@@ -10,6 +11,8 @@ const MovieCard = ({movie}) => {
         <Card.Title>{movie.title}</Card.Title>
         <Card.Text>
          {movie.description}
+         <br/><hr/>
+         <Rating  isMovieRating={true} moviRating={movie.rate}/>
         </Card.Text>
         {/* <Button variant="primary">Go somewhere</Button> */}
         </Card.Body>

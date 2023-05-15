@@ -2,12 +2,17 @@ import React from 'react';
 import MovieCard from "../MovieCard/MovieCard"
 import "./MovieListe.css";
 
-const MovieListe = ({movies}) => {
+const MovieListe = ({movies, inputSearch, rating}) => {
     return (
         <div className='moviesList'>
-            {movies.map( (movie)=> (
-            <MovieCard movie={movie} key={movie.id}/>))
-        }
+            {movies
+            .filter((movie) => 
+             movie.title.toUpperCase().includes(inputSearch.toUpperCase())
+             &&
+             movie.rate >= rating)
+            .map((movie) => (<MovieCard movie={movie} key={movie.id}/>))
+        } 
+        
         </div>
     );
 };

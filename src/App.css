@@ -6,3 +6,7 @@
   background-color: black;
 }
 
+.filterRate{
+  display: flex;
+  justify-content: space-around;
+}
